@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background">
+    <!-- 提示信息 -->
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/please_input_pwd"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+    <!-- 密码显示框 -->
+    <LinearLayout
+        android:id="@+id/ll_pass"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_info"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.iosnumsercet.widget.PasswordTextView
+            android:id="@+id/et_pwd1"
+            style="@style/style_edit" />
+
+        <com.iosnumsercet.widget.PasswordTextView
+            android:id="@+id/et_pwd2"
+            style="@style/style_edit"
+            android:layout_marginLeft="15dp" />
+
+        <com.iosnumsercet.widget.PasswordTextView
+            android:id="@+id/et_pwd3"
+            style="@style/style_edit"
+            android:layout_marginLeft="15dp" />
+
+        <com.iosnumsercet.widget.PasswordTextView
+            android:id="@+id/et_pwd4"
+            style="@style/style_edit"
+            android:layout_marginLeft="15dp" />
+    </LinearLayout>
+    <!-- 数字键盘 -->
+    <com.iosnumsercet.widget.NumericKeyboard
+        android:id="@+id/nk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@id/ll_pass" />
+    <!-- 底部布局 -->
+    <RelativeLayout
+        android:id="@id/rl_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <!-- 重输按钮 -->
+        <Button
+            android:id="@+id/btn_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:onClick="doClick"
+            android:text="@string/input_again" />
+        <!-- 删除按钮 -->
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="doClick"
+            android:text="@string/delete" />
+    </RelativeLayout>
+</RelativeLayout>
